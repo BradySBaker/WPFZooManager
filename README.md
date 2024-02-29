@@ -11,3 +11,5 @@ This is a simple program using WPF to display an interactive UI and a SQL databa
 * Displays zoo list and animal List, and displays associated animals for current selected zoo.
 
 This project came from the Complete C# Masterclass udemy course by Denis Panjuta
+
+![](https://github.com/BradySBaker/WPFZooManager/blob/main/video.gif)
