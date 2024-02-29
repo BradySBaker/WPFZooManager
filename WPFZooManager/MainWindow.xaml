@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFZooManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
@@ -20,16 +20,35 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="65"/>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Label Content="Zoos" Grid.Column="1" Grid.Row="1"/>
         <Label Content="Associated Animals" Grid.Column="3" Grid.Row="1"/>
-        <Button Content="Add Animal to Zoo" Grid.Column="5" Grid.Row="1"/>
+        <Button Click="AddAnimalToZoo_Clicked" Content="Add Animal to Zoo" Grid.Column="5" Grid.Row="1" Height="20"/>
         <ListBox x:Name="ZooList" Grid.Row="2" Grid.Column="1" SelectionChanged="ZooList_SelectionChanged"/>
         <ListBox x:Name="AssociatedAnimalsList" Grid.Row="2" Grid.Column="3"/>
-        <ListBox Grid.Row="2" Grid.RowSpan="2" Grid.Column="5"/>
+        <ListBox x:Name="AnimalList" Grid.Row="2" Grid.RowSpan="3" Grid.Column="5"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                <Button Click="DeleteZoo_Clicked" Content="Delete Zoo" Width="140" Margin="0,0,10,0"/>
+                <Button Click="RemoveAnimal_Clicked" Content="Remove Animal" Width="140"/>
+            </StackPanel>
+            
+            <TextBox x:Name="NameInput" Margin="0,0,0,3" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Click="AddZoo_Clicked" Content="Add Zoo" Width="140" Margin="0,0,10,0"/>
+                <Button Click="AddAnimal_Clicked" Content="Add Animal" Width="140"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Click="UpdateZoo_Clicked" Content="Update Zoo" Grid.Column="1" Grid.Row="5" Height="20"/>
+        <Button Click="UpdateAnimal_Clicked" Content="Update Animal" Grid.Column="3" Grid.Row="5" Height="20"/>
+        <Button Click="DeleteAnimal_Clicked" Content="Delete Animal" Grid.Column="5" Grid.Row="5" Height="20"/>
 
     </Grid>
 </Window>
