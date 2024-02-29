@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPFZooManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFZooManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label Content="Zoos" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="Associated Animals" Grid.Column="3" Grid.Row="1"/>
+        <Button Content="Add Animal to Zoo" Grid.Column="5" Grid.Row="1"/>
+        <ListBox x:Name="ZooList" Grid.Row="2" Grid.Column="1" SelectionChanged="ZooList_SelectionChanged"/>
+        <ListBox x:Name="AssociatedAnimalsList" Grid.Row="2" Grid.Column="3"/>
+        <ListBox Grid.Row="2" Grid.RowSpan="2" Grid.Column="5"/>
+
+    </Grid>
+</Window>
